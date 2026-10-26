@@ -1,0 +1,11 @@
+{
+  "pin": "ea100cee3f69711de12485ba061950c5fc65258f",
+  "copy": [
+    "write"
+  ],
+  "paste": [
+    "write",
+    "core:platform:paste"
+  ],
+  "copyHidesWindow": false
+}

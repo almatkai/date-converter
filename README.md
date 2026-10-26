@@ -26,3 +26,5 @@ pnpm build
 ## Credits
 
 Adapted for Tezbar from Raycast's MIT-licensed `date-converter` extension at upstream commit `6734d85992290066fd31a7f5bee3cca3d3545a1a`. Original author `asportnoy` and contributors `vineus`, `danyal`, `alex925` remain credited in `package.json`.
+
+[Standalone native Rust V2 (feature-branch review)](v2/README.md).

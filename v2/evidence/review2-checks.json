@@ -1,0 +1,44 @@
+{
+  "round": 2,
+  "git": {
+    "root": "/Users/almat/Desktop/code/Tezbar APP/rust-extension-ports/date-converter",
+    "branch": "feat/native-v2-rust",
+    "head": "ad4ebc6856db6a9c554a4e4a093a319b12f66fdf",
+    "indexEmpty": true,
+    "status": " M README.md\n?? v2/\n"
+  },
+  "sourceSha256": {
+    "src/converter.rs": "98381464ad38b0c3145bdfced1f5a7745138251dee3606b4728dec657577c715",
+    "src/adapter.rs": "22f35a2a78f697ca810c4b8c4d5e820cf10140d092122620b8359d3b175b2954",
+    "src/natural.rs": "c485a3ef36dd87ad6e63020848806ced194b130d99fdd53f256cf6af53ef4b05",
+    "src/lib.rs": "3e388f1db419ac4a7f6beb04deab719c6e08841926b602bc23e135fdede04d9e",
+    "src/date.rs": "1d97d789df3128c7ec5dcd875840c95b53ba5cb2f343454a757da28570da71bc",
+    "src/main.rs": "1bb4e8f37b25f5ea44906e6acd6698e3440272b9244542eb147c6b6b2da38f1f",
+    "src/storage.rs": "8d3539a11e07c619c877791d40b40c50c12130f8baf7eff625605c99ae5920e0"
+  },
+  "immutableFixtureFiles": 290,
+  "immutableFixturesMatchReview1": true,
+  "hostPatchSha256": "e551362bfe65a6b75a779361621eb09c30fc8f9def7ef20198eedc86fa48ecd5",
+  "iconSha256": "34d84d89c4a6e6692d94b3a8a439875ba32d9249eee592f36a9c8df4ec6e8b65",
+  "domain": {
+    "total": 2239,
+    "exact": 2208,
+    "caseSpecificExclusions": 31,
+    "exclusionKinds": {
+      "pre-0100-or-year-overflow": 17,
+      "subminute-offset": 14
+    },
+    "newReview2Cases": 911,
+    "newReview2Exact": 911,
+    "unresolved": 0
+  },
+  "standalone": {
+    "freshHttpsSdkCargoHome": true,
+    "extractedArm64DevelopmentZipProcessScenarios": 11,
+    "archiveMembers": 167,
+    "isolatedSourceMatchesFinal": true,
+    "binarySha256": "0d42fc8960240c1e056186c7f80c54c9453bbbd8402c40f1dd7ce0f83ee17b05"
+  },
+  "hostVerification": "not run; unapplied generic patch; no host working-file reads/builds",
+  "xerj": "ax-59ae786eda6c remains incomplete/frozen; current files checked exhaustively with rg and hashes"
+}

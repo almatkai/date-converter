@@ -1,0 +1,21 @@
+{
+  "checks": [
+    "empty defaults, current draft, search A-B-A, exact copy/both actions, consumed IDs",
+    "all four formats, preferences, copy/paste/both order and no additional hide",
+    "multi-result parsing, invalid-input editing, no old output copy",
+    "closed ACKs reject null/bool/contradictions; explicit retry preserves prepared bytes",
+    "canceled effect, late ACK and stale action cannot automatically replay",
+    "both mode confirms write stage; uncertain paste retries paste only",
+    "140 canceled opens: SDK-owned scopes, adapter drop guard and bounded prune",
+    "128-session capacity and recovery after dispose",
+    "EOF cancels reverse RPC and terminates production process",
+    "target dropdown persistence, unknown keys, profile isolation, corruption editable",
+    "timezone errors/refresh/persisted invalid target recover memoized dates atomically; repeated toggles reject stale actions without effects"
+  ],
+  "canceledOpens": {
+    "canceled": 140,
+    "completedBeforeCancel": 0
+  },
+  "producerFixture": "tests/host_extracts.rs",
+  "productionExecutable": "/Users/almat/Desktop/code/Tezbar APP/rust-extension-ports/date-converter/v2/target/debug/date-converter"
+}

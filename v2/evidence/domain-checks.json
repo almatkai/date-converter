@@ -1,0 +1,1785 @@
+{
+  "total": 2239,
+  "exact": 2208,
+  "explicitLimits": [
+    {
+      "index": 222,
+      "text": "0001-01-01T00:00:00Z",
+      "tz": "UTC",
+      "target": null,
+      "native": {
+        "error": "Outside supported civil years 0100..9999 (engine-specific early-year reparsing or overflow)"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -62135596800000,
+            "label": "ISO Date",
+            "title": "Monday, January 1, 2001 12:00:00",
+            "subtitle": "ISO Date - 2,024 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-62135596800000"
+              ],
+              [
+                "iso",
+                "0001-01-01T00:00:00.000Z"
+              ],
+              [
+                "human",
+                "Monday, January 1, 2001 12:00:00"
+              ],
+              [
+                "unix-s",
+                "-62135596800"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Pre-0100 converted civil year or civil year overflow past 9999; JS engine Date reparse has separate early-year semantics."
+    },
+    {
+      "index": 223,
+      "text": "0099-01-01T00:00:00Z",
+      "tz": "UTC",
+      "target": null,
+      "native": {
+        "error": "Outside supported civil years 0100..9999 (engine-specific early-year reparsing or overflow)"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -59042995200000,
+            "label": "ISO Date",
+            "title": "Friday, January 1, 1999 12:00:00",
+            "subtitle": "ISO Date - 1,926 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59042995200000"
+              ],
+              [
+                "iso",
+                "0099-01-01T00:00:00.000Z"
+              ],
+              [
+                "human",
+                "Friday, January 1, 1999 12:00:00"
+              ],
+              [
+                "unix-s",
+                "-59042995200"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Pre-0100 converted civil year or civil year overflow past 9999; JS engine Date reparse has separate early-year semantics."
+    },
+    {
+      "index": 545,
+      "text": "0001-01-01T00:00:00Z",
+      "tz": "America/New_York",
+      "target": null,
+      "native": {
+        "error": "Outside supported civil years 0100..9999 (engine-specific early-year reparsing or overflow)"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -62135596800000,
+            "label": "ISO Date",
+            "title": "Monday, December 31, 2001 07:03:58",
+            "subtitle": "ISO Date - 2,024 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-62135596802000"
+              ],
+              [
+                "iso",
+                "0000-12-31T23:59:58.000Z"
+              ],
+              [
+                "human",
+                "Monday, December 31, 2001 07:03:58"
+              ],
+              [
+                "unix-s",
+                "-62135596802"
+              ]
+            ]
+          },
+          {
+            "ms": -62135593438000,
+            "label": "0001-01-01T00:00:00Z",
+            "title": "Monday, December 31, 2001 08:00:00",
+            "subtitle": "0001-01-01T00:00:00Z - 2,024 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-62135593440000"
+              ],
+              [
+                "iso",
+                "0001-01-01T00:56:00.000Z"
+              ],
+              [
+                "human",
+                "Monday, December 31, 2001 08:00:00"
+              ],
+              [
+                "unix-s",
+                "-62135593440"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Pre-0100 converted civil year or civil year overflow past 9999; JS engine Date reparse has separate early-year semantics."
+    },
+    {
+      "index": 546,
+      "text": "0099-01-01T00:00:00Z",
+      "tz": "America/New_York",
+      "target": null,
+      "native": {
+        "error": "Outside supported civil years 0100..9999 (engine-specific early-year reparsing or overflow)"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -59042995200000,
+            "label": "ISO Date",
+            "title": "Thursday, December 31, 1998 07:03:58",
+            "subtitle": "ISO Date - 1,926 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59042995202000"
+              ],
+              [
+                "iso",
+                "0098-12-31T23:59:58.000Z"
+              ],
+              [
+                "human",
+                "Thursday, December 31, 1998 07:03:58"
+              ],
+              [
+                "unix-s",
+                "-59042995202"
+              ]
+            ]
+          },
+          {
+            "ms": -59042991838000,
+            "label": "0099-01-01T00:00:00Z",
+            "title": "Thursday, December 31, 1998 08:00:00",
+            "subtitle": "0099-01-01T00:00:00Z - 1,926 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59042991840000"
+              ],
+              [
+                "iso",
+                "0099-01-01T00:56:00.000Z"
+              ],
+              [
+                "human",
+                "Thursday, December 31, 1998 08:00:00"
+              ],
+              [
+                "unix-s",
+                "-59042991840"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Pre-0100 converted civil year or civil year overflow past 9999; JS engine Date reparse has separate early-year semantics."
+    },
+    {
+      "index": 547,
+      "text": "0100-01-01T00:00:00Z",
+      "tz": "America/New_York",
+      "target": null,
+      "native": {
+        "error": "Outside supported civil years 0100..9999 (engine-specific early-year reparsing or overflow)"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -59011459200000,
+            "label": "ISO Date",
+            "title": "Friday, December 31, 1999 07:03:58",
+            "subtitle": "ISO Date - 1,925 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59011459202000"
+              ],
+              [
+                "iso",
+                "0099-12-31T23:59:58.000Z"
+              ],
+              [
+                "human",
+                "Friday, December 31, 1999 07:03:58"
+              ],
+              [
+                "unix-s",
+                "-59011459202"
+              ]
+            ]
+          },
+          {
+            "ms": -59011455838000,
+            "label": "0100-01-01T00:00:00Z",
+            "title": "Friday, December 31, 1999 08:00:00",
+            "subtitle": "0100-01-01T00:00:00Z - 1,925 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59011455840000"
+              ],
+              [
+                "iso",
+                "0100-01-01T00:56:00.000Z"
+              ],
+              [
+                "human",
+                "Friday, December 31, 1999 08:00:00"
+              ],
+              [
+                "unix-s",
+                "-59011455840"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Pre-0100 converted civil year or civil year overflow past 9999; JS engine Date reparse has separate early-year semantics."
+    },
+    {
+      "index": 548,
+      "text": "0999-01-01T00:00:00Z",
+      "tz": "America/New_York",
+      "target": null,
+      "native": {
+        "error": "Historical subminute timezone offsets are outside native support"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -30641760000000,
+            "label": "ISO Date",
+            "title": "Monday, December 31, 0998 07:03:58",
+            "subtitle": "ISO Date - 1,026 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-30641759760000"
+              ],
+              [
+                "iso",
+                "0999-01-01T00:04:00.000Z"
+              ],
+              [
+                "human",
+                "Monday, December 31, 0998 07:03:58"
+              ],
+              [
+                "unix-s",
+                "-30641759760"
+              ]
+            ]
+          },
+          {
+            "ms": -30641756638000,
+            "label": "0999-01-01T00:00:00Z",
+            "title": "Monday, December 31, 0998 08:00:00",
+            "subtitle": "0999-01-01T00:00:00Z - 1,026 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-30641756398000"
+              ],
+              [
+                "iso",
+                "0999-01-01T01:00:02.000Z"
+              ],
+              [
+                "human",
+                "Monday, December 31, 0998 08:00:00"
+              ],
+              [
+                "unix-s",
+                "-30641756398"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Historical IANA offset has seconds; dayjs Date reparse/quarter-hour rounding is not translated for subminute offsets."
+    },
+    {
+      "index": 549,
+      "text": "1000-01-01T00:00:00Z",
+      "tz": "America/New_York",
+      "target": null,
+      "native": {
+        "error": "Historical subminute timezone offsets are outside native support"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -30610224000000,
+            "label": "ISO Date",
+            "title": "Tuesday, December 31, 0999 07:03:58",
+            "subtitle": "ISO Date - 1,025 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-30610223760000"
+              ],
+              [
+                "iso",
+                "1000-01-01T00:04:00.000Z"
+              ],
+              [
+                "human",
+                "Tuesday, December 31, 0999 07:03:58"
+              ],
+              [
+                "unix-s",
+                "-30610223760"
+              ]
+            ]
+          },
+          {
+            "ms": -30610220638000,
+            "label": "1000-01-01T00:00:00Z",
+            "title": "Tuesday, December 31, 0999 08:00:00",
+            "subtitle": "1000-01-01T00:00:00Z - 1,025 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-30610220398000"
+              ],
+              [
+                "iso",
+                "1000-01-01T01:00:02.000Z"
+              ],
+              [
+                "human",
+                "Tuesday, December 31, 0999 08:00:00"
+              ],
+              [
+                "unix-s",
+                "-30610220398"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Historical IANA offset has seconds; dayjs Date reparse/quarter-hour rounding is not translated for subminute offsets."
+    },
+    {
+      "index": 1090,
+      "text": "0001-01-01T00:00:00Z",
+      "tz": "Europe/Berlin",
+      "target": null,
+      "native": {
+        "error": "Outside supported civil years 0100..9999 (engine-specific early-year reparsing or overflow)"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -62135596800000,
+            "label": "ISO Date",
+            "title": "Monday, January 1, 2001 12:53:28",
+            "subtitle": "ISO Date - 2,024 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-62135596772000"
+              ],
+              [
+                "iso",
+                "0001-01-01T00:00:28.000Z"
+              ],
+              [
+                "human",
+                "Monday, January 1, 2001 12:53:28"
+              ],
+              [
+                "unix-s",
+                "-62135596772"
+              ]
+            ]
+          },
+          {
+            "ms": -62135596408000,
+            "label": "0001-01-01T00:00:00Z",
+            "title": "Monday, January 1, 2001 01:00:00",
+            "subtitle": "0001-01-01T00:00:00Z - 2,024 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-62135596380000"
+              ],
+              [
+                "iso",
+                "0001-01-01T00:07:00.000Z"
+              ],
+              [
+                "human",
+                "Monday, January 1, 2001 01:00:00"
+              ],
+              [
+                "unix-s",
+                "-62135596380"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Pre-0100 converted civil year or civil year overflow past 9999; JS engine Date reparse has separate early-year semantics."
+    },
+    {
+      "index": 1091,
+      "text": "0099-01-01T00:00:00Z",
+      "tz": "Europe/Berlin",
+      "target": null,
+      "native": {
+        "error": "Outside supported civil years 0100..9999 (engine-specific early-year reparsing or overflow)"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -59042995200000,
+            "label": "ISO Date",
+            "title": "Friday, January 1, 1999 12:53:28",
+            "subtitle": "ISO Date - 1,926 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59042995172000"
+              ],
+              [
+                "iso",
+                "0099-01-01T00:00:28.000Z"
+              ],
+              [
+                "human",
+                "Friday, January 1, 1999 12:53:28"
+              ],
+              [
+                "unix-s",
+                "-59042995172"
+              ]
+            ]
+          },
+          {
+            "ms": -59042994808000,
+            "label": "0099-01-01T00:00:00Z",
+            "title": "Friday, January 1, 1999 01:00:00",
+            "subtitle": "0099-01-01T00:00:00Z - 1,926 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59042994780000"
+              ],
+              [
+                "iso",
+                "0099-01-01T00:07:00.000Z"
+              ],
+              [
+                "human",
+                "Friday, January 1, 1999 01:00:00"
+              ],
+              [
+                "unix-s",
+                "-59042994780"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Pre-0100 converted civil year or civil year overflow past 9999; JS engine Date reparse has separate early-year semantics."
+    },
+    {
+      "index": 1092,
+      "text": "0100-01-01T00:00:00Z",
+      "tz": "Europe/Berlin",
+      "target": null,
+      "native": {
+        "error": "Historical subminute timezone offsets are outside native support"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -59011459200000,
+            "label": "ISO Date",
+            "title": "Friday, January 1, 0100 12:53:28",
+            "subtitle": "ISO Date - 1,925 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59011459620000"
+              ],
+              [
+                "iso",
+                "0099-12-31T23:53:00.000Z"
+              ],
+              [
+                "human",
+                "Friday, January 1, 0100 12:53:28"
+              ],
+              [
+                "unix-s",
+                "-59011459620"
+              ]
+            ]
+          },
+          {
+            "ms": -59011458808000,
+            "label": "0100-01-01T00:00:00Z",
+            "title": "Friday, January 1, 0100 01:00:00",
+            "subtitle": "0100-01-01T00:00:00Z - 1,925 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59011459228000"
+              ],
+              [
+                "iso",
+                "0099-12-31T23:59:32.000Z"
+              ],
+              [
+                "human",
+                "Friday, January 1, 0100 01:00:00"
+              ],
+              [
+                "unix-s",
+                "-59011459228"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Historical IANA offset has seconds; dayjs Date reparse/quarter-hour rounding is not translated for subminute offsets."
+    },
+    {
+      "index": 1093,
+      "text": "0999-01-01T00:00:00Z",
+      "tz": "Europe/Berlin",
+      "target": null,
+      "native": {
+        "error": "Historical subminute timezone offsets are outside native support"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -30641760000000,
+            "label": "ISO Date",
+            "title": "Tuesday, January 1, 0999 12:53:28",
+            "subtitle": "ISO Date - 1,026 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-30641760420000"
+              ],
+              [
+                "iso",
+                "0998-12-31T23:53:00.000Z"
+              ],
+              [
+                "human",
+                "Tuesday, January 1, 0999 12:53:28"
+              ],
+              [
+                "unix-s",
+                "-30641760420"
+              ]
+            ]
+          },
+          {
+            "ms": -30641759608000,
+            "label": "0999-01-01T00:00:00Z",
+            "title": "Tuesday, January 1, 0999 01:00:00",
+            "subtitle": "0999-01-01T00:00:00Z - 1,026 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-30641760028000"
+              ],
+              [
+                "iso",
+                "0998-12-31T23:59:32.000Z"
+              ],
+              [
+                "human",
+                "Tuesday, January 1, 0999 01:00:00"
+              ],
+              [
+                "unix-s",
+                "-30641760028"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Historical IANA offset has seconds; dayjs Date reparse/quarter-hour rounding is not translated for subminute offsets."
+    },
+    {
+      "index": 1094,
+      "text": "1000-01-01T00:00:00Z",
+      "tz": "Europe/Berlin",
+      "target": null,
+      "native": {
+        "error": "Historical subminute timezone offsets are outside native support"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -30610224000000,
+            "label": "ISO Date",
+            "title": "Wednesday, January 1, 1000 12:53:28",
+            "subtitle": "ISO Date - 1,025 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-30610224420000"
+              ],
+              [
+                "iso",
+                "0999-12-31T23:53:00.000Z"
+              ],
+              [
+                "human",
+                "Wednesday, January 1, 1000 12:53:28"
+              ],
+              [
+                "unix-s",
+                "-30610224420"
+              ]
+            ]
+          },
+          {
+            "ms": -30610223608000,
+            "label": "1000-01-01T00:00:00Z",
+            "title": "Wednesday, January 1, 1000 01:00:00",
+            "subtitle": "1000-01-01T00:00:00Z - 1,025 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-30610224028000"
+              ],
+              [
+                "iso",
+                "0999-12-31T23:59:32.000Z"
+              ],
+              [
+                "human",
+                "Wednesday, January 1, 1000 01:00:00"
+              ],
+              [
+                "unix-s",
+                "-30610224028"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Historical IANA offset has seconds; dayjs Date reparse/quarter-hour rounding is not translated for subminute offsets."
+    },
+    {
+      "index": 1095,
+      "text": "9999-12-31T23:59:59Z",
+      "tz": "Europe/Berlin",
+      "target": null,
+      "native": {
+        "error": "Outside supported civil years 0100..9999 (engine-specific early-year reparsing or overflow)"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": 253402300799000,
+            "label": "ISO Date",
+            "title": "Saturday, January 1, 10000 12:59:59",
+            "subtitle": "ISO Date - in 7,975 years",
+            "values": [
+              [
+                "unix-ms",
+                "253402300799000"
+              ],
+              [
+                "iso",
+                "9999-12-31T23:59:59.000Z"
+              ],
+              [
+                "human",
+                "Saturday, January 1, 10000 12:59:59"
+              ],
+              [
+                "unix-s",
+                "253402300799"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Pre-0100 converted civil year or civil year overflow past 9999; JS engine Date reparse has separate early-year semantics."
+    },
+    {
+      "index": 1467,
+      "text": "0001-01-01T00:00:00Z",
+      "tz": "Asia/Kathmandu",
+      "target": null,
+      "native": {
+        "error": "Outside supported civil years 0100..9999 (engine-specific early-year reparsing or overflow)"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -62135596800000,
+            "label": "ISO Date",
+            "title": "Monday, January 1, 2001 05:41:16",
+            "subtitle": "ISO Date - 2,024 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-62135596784000"
+              ],
+              [
+                "iso",
+                "0001-01-01T00:00:16.000Z"
+              ],
+              [
+                "human",
+                "Monday, January 1, 2001 05:41:16"
+              ],
+              [
+                "unix-s",
+                "-62135596784"
+              ]
+            ]
+          },
+          {
+            "ms": -62135596576000,
+            "label": "0001-01-01T00:00:00Z",
+            "title": "Monday, January 1, 2001 05:45:00",
+            "subtitle": "0001-01-01T00:00:00Z - 2,024 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-62135596560000"
+              ],
+              [
+                "iso",
+                "0001-01-01T00:04:00.000Z"
+              ],
+              [
+                "human",
+                "Monday, January 1, 2001 05:45:00"
+              ],
+              [
+                "unix-s",
+                "-62135596560"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Pre-0100 converted civil year or civil year overflow past 9999; JS engine Date reparse has separate early-year semantics."
+    },
+    {
+      "index": 1468,
+      "text": "0099-01-01T00:00:00Z",
+      "tz": "Asia/Kathmandu",
+      "target": null,
+      "native": {
+        "error": "Outside supported civil years 0100..9999 (engine-specific early-year reparsing or overflow)"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -59042995200000,
+            "label": "ISO Date",
+            "title": "Friday, January 1, 1999 05:41:16",
+            "subtitle": "ISO Date - 1,926 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59042995184000"
+              ],
+              [
+                "iso",
+                "0099-01-01T00:00:16.000Z"
+              ],
+              [
+                "human",
+                "Friday, January 1, 1999 05:41:16"
+              ],
+              [
+                "unix-s",
+                "-59042995184"
+              ]
+            ]
+          },
+          {
+            "ms": -59042994976000,
+            "label": "0099-01-01T00:00:00Z",
+            "title": "Friday, January 1, 1999 05:45:00",
+            "subtitle": "0099-01-01T00:00:00Z - 1,926 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59042994960000"
+              ],
+              [
+                "iso",
+                "0099-01-01T00:04:00.000Z"
+              ],
+              [
+                "human",
+                "Friday, January 1, 1999 05:45:00"
+              ],
+              [
+                "unix-s",
+                "-59042994960"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Pre-0100 converted civil year or civil year overflow past 9999; JS engine Date reparse has separate early-year semantics."
+    },
+    {
+      "index": 1469,
+      "text": "0100-01-01T00:00:00Z",
+      "tz": "Asia/Kathmandu",
+      "target": null,
+      "native": {
+        "error": "Historical subminute timezone offsets are outside native support"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -59011459200000,
+            "label": "ISO Date",
+            "title": "Friday, January 1, 0100 05:41:16",
+            "subtitle": "ISO Date - 1,925 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59011459440000"
+              ],
+              [
+                "iso",
+                "0099-12-31T23:56:00.000Z"
+              ],
+              [
+                "human",
+                "Friday, January 1, 0100 05:41:16"
+              ],
+              [
+                "unix-s",
+                "-59011459440"
+              ]
+            ]
+          },
+          {
+            "ms": -59011458976000,
+            "label": "0100-01-01T00:00:00Z",
+            "title": "Friday, January 1, 0100 05:45:00",
+            "subtitle": "0100-01-01T00:00:00Z - 1,925 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59011459216000"
+              ],
+              [
+                "iso",
+                "0099-12-31T23:59:44.000Z"
+              ],
+              [
+                "human",
+                "Friday, January 1, 0100 05:45:00"
+              ],
+              [
+                "unix-s",
+                "-59011459216"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Historical IANA offset has seconds; dayjs Date reparse/quarter-hour rounding is not translated for subminute offsets."
+    },
+    {
+      "index": 1470,
+      "text": "0999-01-01T00:00:00Z",
+      "tz": "Asia/Kathmandu",
+      "target": null,
+      "native": {
+        "error": "Historical subminute timezone offsets are outside native support"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -30641760000000,
+            "label": "ISO Date",
+            "title": "Tuesday, January 1, 0999 05:41:16",
+            "subtitle": "ISO Date - 1,026 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-30641760240000"
+              ],
+              [
+                "iso",
+                "0998-12-31T23:56:00.000Z"
+              ],
+              [
+                "human",
+                "Tuesday, January 1, 0999 05:41:16"
+              ],
+              [
+                "unix-s",
+                "-30641760240"
+              ]
+            ]
+          },
+          {
+            "ms": -30641759776000,
+            "label": "0999-01-01T00:00:00Z",
+            "title": "Tuesday, January 1, 0999 05:45:00",
+            "subtitle": "0999-01-01T00:00:00Z - 1,026 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-30641760016000"
+              ],
+              [
+                "iso",
+                "0998-12-31T23:59:44.000Z"
+              ],
+              [
+                "human",
+                "Tuesday, January 1, 0999 05:45:00"
+              ],
+              [
+                "unix-s",
+                "-30641760016"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Historical IANA offset has seconds; dayjs Date reparse/quarter-hour rounding is not translated for subminute offsets."
+    },
+    {
+      "index": 1471,
+      "text": "1000-01-01T00:00:00Z",
+      "tz": "Asia/Kathmandu",
+      "target": null,
+      "native": {
+        "error": "Historical subminute timezone offsets are outside native support"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -30610224000000,
+            "label": "ISO Date",
+            "title": "Wednesday, January 1, 1000 05:41:16",
+            "subtitle": "ISO Date - 1,025 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-30610224240000"
+              ],
+              [
+                "iso",
+                "0999-12-31T23:56:00.000Z"
+              ],
+              [
+                "human",
+                "Wednesday, January 1, 1000 05:41:16"
+              ],
+              [
+                "unix-s",
+                "-30610224240"
+              ]
+            ]
+          },
+          {
+            "ms": -30610223776000,
+            "label": "1000-01-01T00:00:00Z",
+            "title": "Wednesday, January 1, 1000 05:45:00",
+            "subtitle": "1000-01-01T00:00:00Z - 1,025 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-30610224016000"
+              ],
+              [
+                "iso",
+                "0999-12-31T23:59:44.000Z"
+              ],
+              [
+                "human",
+                "Wednesday, January 1, 1000 05:45:00"
+              ],
+              [
+                "unix-s",
+                "-30610224016"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Historical IANA offset has seconds; dayjs Date reparse/quarter-hour rounding is not translated for subminute offsets."
+    },
+    {
+      "index": 1472,
+      "text": "9999-12-31T23:59:59Z",
+      "tz": "Asia/Kathmandu",
+      "target": null,
+      "native": {
+        "error": "Outside supported civil years 0100..9999 (engine-specific early-year reparsing or overflow)"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": 253402300799000,
+            "label": "ISO Date",
+            "title": "Saturday, January 1, 10000 05:44:59",
+            "subtitle": "ISO Date - in 7,975 years",
+            "values": [
+              [
+                "unix-ms",
+                "253402300799000"
+              ],
+              [
+                "iso",
+                "9999-12-31T23:59:59.000Z"
+              ],
+              [
+                "human",
+                "Saturday, January 1, 10000 05:44:59"
+              ],
+              [
+                "unix-s",
+                "253402300799"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Pre-0100 converted civil year or civil year overflow past 9999; JS engine Date reparse has separate early-year semantics."
+    },
+    {
+      "index": 1669,
+      "text": "0001-01-01T00:00:00Z",
+      "tz": "Australia/Lord_Howe",
+      "target": null,
+      "native": {
+        "error": "Outside supported civil years 0100..9999 (engine-specific early-year reparsing or overflow)"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -62135596800000,
+            "label": "ISO Date",
+            "title": "Monday, January 1, 2001 10:36:20",
+            "subtitle": "ISO Date - 2,024 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-62135594980000"
+              ],
+              [
+                "iso",
+                "0001-01-01T00:30:20.000Z"
+              ],
+              [
+                "human",
+                "Monday, January 1, 2001 10:36:20"
+              ],
+              [
+                "unix-s",
+                "-62135594980"
+              ]
+            ]
+          },
+          {
+            "ms": -62135595380000,
+            "label": "0001-01-01T00:00:00Z",
+            "title": "Monday, January 1, 2001 11:00:00",
+            "subtitle": "0001-01-01T00:00:00Z - 2,024 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-62135593560000"
+              ],
+              [
+                "iso",
+                "0001-01-01T00:54:00.000Z"
+              ],
+              [
+                "human",
+                "Monday, January 1, 2001 11:00:00"
+              ],
+              [
+                "unix-s",
+                "-62135593560"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Pre-0100 converted civil year or civil year overflow past 9999; JS engine Date reparse has separate early-year semantics."
+    },
+    {
+      "index": 1670,
+      "text": "0099-01-01T00:00:00Z",
+      "tz": "Australia/Lord_Howe",
+      "target": null,
+      "native": {
+        "error": "Outside supported civil years 0100..9999 (engine-specific early-year reparsing or overflow)"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -59042995200000,
+            "label": "ISO Date",
+            "title": "Friday, January 1, 1999 10:36:20",
+            "subtitle": "ISO Date - 1,926 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59042993380000"
+              ],
+              [
+                "iso",
+                "0099-01-01T00:30:20.000Z"
+              ],
+              [
+                "human",
+                "Friday, January 1, 1999 10:36:20"
+              ],
+              [
+                "unix-s",
+                "-59042993380"
+              ]
+            ]
+          },
+          {
+            "ms": -59042993780000,
+            "label": "0099-01-01T00:00:00Z",
+            "title": "Friday, January 1, 1999 11:00:00",
+            "subtitle": "0099-01-01T00:00:00Z - 1,926 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59042991960000"
+              ],
+              [
+                "iso",
+                "0099-01-01T00:54:00.000Z"
+              ],
+              [
+                "human",
+                "Friday, January 1, 1999 11:00:00"
+              ],
+              [
+                "unix-s",
+                "-59042991960"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Pre-0100 converted civil year or civil year overflow past 9999; JS engine Date reparse has separate early-year semantics."
+    },
+    {
+      "index": 1671,
+      "text": "0100-01-01T00:00:00Z",
+      "tz": "Australia/Lord_Howe",
+      "target": null,
+      "native": {
+        "error": "Historical subminute timezone offsets are outside native support"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -59011459200000,
+            "label": "ISO Date",
+            "title": "Friday, January 1, 0100 10:36:20",
+            "subtitle": "ISO Date - 1,925 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59011458840000"
+              ],
+              [
+                "iso",
+                "0100-01-01T00:06:00.000Z"
+              ],
+              [
+                "human",
+                "Friday, January 1, 0100 10:36:20"
+              ],
+              [
+                "unix-s",
+                "-59011458840"
+              ]
+            ]
+          },
+          {
+            "ms": -59011457780000,
+            "label": "0100-01-01T00:00:00Z",
+            "title": "Friday, January 1, 0100 11:00:00",
+            "subtitle": "0100-01-01T00:00:00Z - 1,925 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59011457420000"
+              ],
+              [
+                "iso",
+                "0100-01-01T00:29:40.000Z"
+              ],
+              [
+                "human",
+                "Friday, January 1, 0100 11:00:00"
+              ],
+              [
+                "unix-s",
+                "-59011457420"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Historical IANA offset has seconds; dayjs Date reparse/quarter-hour rounding is not translated for subminute offsets."
+    },
+    {
+      "index": 1672,
+      "text": "0999-01-01T00:00:00Z",
+      "tz": "Australia/Lord_Howe",
+      "target": null,
+      "native": {
+        "error": "Historical subminute timezone offsets are outside native support"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -30641760000000,
+            "label": "ISO Date",
+            "title": "Tuesday, January 1, 0999 10:36:20",
+            "subtitle": "ISO Date - 1,026 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-30641759640000"
+              ],
+              [
+                "iso",
+                "0999-01-01T00:06:00.000Z"
+              ],
+              [
+                "human",
+                "Tuesday, January 1, 0999 10:36:20"
+              ],
+              [
+                "unix-s",
+                "-30641759640"
+              ]
+            ]
+          },
+          {
+            "ms": -30641758580000,
+            "label": "0999-01-01T00:00:00Z",
+            "title": "Tuesday, January 1, 0999 11:00:00",
+            "subtitle": "0999-01-01T00:00:00Z - 1,026 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-30641758220000"
+              ],
+              [
+                "iso",
+                "0999-01-01T00:29:40.000Z"
+              ],
+              [
+                "human",
+                "Tuesday, January 1, 0999 11:00:00"
+              ],
+              [
+                "unix-s",
+                "-30641758220"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Historical IANA offset has seconds; dayjs Date reparse/quarter-hour rounding is not translated for subminute offsets."
+    },
+    {
+      "index": 1673,
+      "text": "1000-01-01T00:00:00Z",
+      "tz": "Australia/Lord_Howe",
+      "target": null,
+      "native": {
+        "error": "Historical subminute timezone offsets are outside native support"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -30610224000000,
+            "label": "ISO Date",
+            "title": "Wednesday, January 1, 1000 10:36:20",
+            "subtitle": "ISO Date - 1,025 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-30610223640000"
+              ],
+              [
+                "iso",
+                "1000-01-01T00:06:00.000Z"
+              ],
+              [
+                "human",
+                "Wednesday, January 1, 1000 10:36:20"
+              ],
+              [
+                "unix-s",
+                "-30610223640"
+              ]
+            ]
+          },
+          {
+            "ms": -30610222580000,
+            "label": "1000-01-01T00:00:00Z",
+            "title": "Wednesday, January 1, 1000 11:00:00",
+            "subtitle": "1000-01-01T00:00:00Z - 1,025 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-30610222220000"
+              ],
+              [
+                "iso",
+                "1000-01-01T00:29:40.000Z"
+              ],
+              [
+                "human",
+                "Wednesday, January 1, 1000 11:00:00"
+              ],
+              [
+                "unix-s",
+                "-30610222220"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Historical IANA offset has seconds; dayjs Date reparse/quarter-hour rounding is not translated for subminute offsets."
+    },
+    {
+      "index": 1674,
+      "text": "9999-12-31T23:59:59Z",
+      "tz": "Australia/Lord_Howe",
+      "target": null,
+      "native": {
+        "error": "Outside supported civil years 0100..9999 (engine-specific early-year reparsing or overflow)"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": 253402300799000,
+            "label": "ISO Date",
+            "title": "Saturday, January 1, 10000 10:59:59",
+            "subtitle": "ISO Date - in 7,975 years",
+            "values": [
+              [
+                "unix-ms",
+                "253402300799000"
+              ],
+              [
+                "iso",
+                "9999-12-31T23:59:59.000Z"
+              ],
+              [
+                "human",
+                "Saturday, January 1, 10000 10:59:59"
+              ],
+              [
+                "unix-s",
+                "253402300799"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Pre-0100 converted civil year or civil year overflow past 9999; JS engine Date reparse has separate early-year semantics."
+    },
+    {
+      "index": 2046,
+      "text": "0001-01-01T00:00:00Z",
+      "tz": "Pacific/Apia",
+      "target": null,
+      "native": {
+        "error": "Outside supported civil years 0100..9999 (engine-specific early-year reparsing or overflow)"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -62135596800000,
+            "label": "ISO Date",
+            "title": "Monday, January 1, 2001 12:33:04",
+            "subtitle": "ISO Date - 2,024 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-62135681396000"
+              ],
+              [
+                "iso",
+                "0000-12-31T00:30:04.000Z"
+              ],
+              [
+                "human",
+                "Monday, January 1, 2001 12:33:04"
+              ],
+              [
+                "unix-s",
+                "-62135681396"
+              ]
+            ]
+          },
+          {
+            "ms": -62135595184000,
+            "label": "0001-01-01T00:00:00Z",
+            "title": "Monday, January 1, 2001 01:00:00",
+            "subtitle": "0001-01-01T00:00:00Z - 2,024 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-62135679780000"
+              ],
+              [
+                "iso",
+                "0000-12-31T00:57:00.000Z"
+              ],
+              [
+                "human",
+                "Monday, January 1, 2001 01:00:00"
+              ],
+              [
+                "unix-s",
+                "-62135679780"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Pre-0100 converted civil year or civil year overflow past 9999; JS engine Date reparse has separate early-year semantics."
+    },
+    {
+      "index": 2047,
+      "text": "0099-01-01T00:00:00Z",
+      "tz": "Pacific/Apia",
+      "target": null,
+      "native": {
+        "error": "Outside supported civil years 0100..9999 (engine-specific early-year reparsing or overflow)"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -59042995200000,
+            "label": "ISO Date",
+            "title": "Friday, January 1, 1999 12:33:04",
+            "subtitle": "ISO Date - 1,926 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59043079796000"
+              ],
+              [
+                "iso",
+                "0098-12-31T00:30:04.000Z"
+              ],
+              [
+                "human",
+                "Friday, January 1, 1999 12:33:04"
+              ],
+              [
+                "unix-s",
+                "-59043079796"
+              ]
+            ]
+          },
+          {
+            "ms": -59042993584000,
+            "label": "0099-01-01T00:00:00Z",
+            "title": "Friday, January 1, 1999 01:00:00",
+            "subtitle": "0099-01-01T00:00:00Z - 1,926 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59043078180000"
+              ],
+              [
+                "iso",
+                "0098-12-31T00:57:00.000Z"
+              ],
+              [
+                "human",
+                "Friday, January 1, 1999 01:00:00"
+              ],
+              [
+                "unix-s",
+                "-59043078180"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Pre-0100 converted civil year or civil year overflow past 9999; JS engine Date reparse has separate early-year semantics."
+    },
+    {
+      "index": 2048,
+      "text": "0100-01-01T00:00:00Z",
+      "tz": "Pacific/Apia",
+      "target": null,
+      "native": {
+        "error": "Historical subminute timezone offsets are outside native support"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -59011459200000,
+            "label": "ISO Date",
+            "title": "Friday, January 1, 0100 12:33:04",
+            "subtitle": "ISO Date - 1,925 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59011459020000"
+              ],
+              [
+                "iso",
+                "0100-01-01T00:03:00.000Z"
+              ],
+              [
+                "human",
+                "Friday, January 1, 0100 12:33:04"
+              ],
+              [
+                "unix-s",
+                "-59011459020"
+              ]
+            ]
+          },
+          {
+            "ms": -59011457584000,
+            "label": "0100-01-01T00:00:00Z",
+            "title": "Friday, January 1, 0100 01:00:00",
+            "subtitle": "0100-01-01T00:00:00Z - 1,925 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-59011457404000"
+              ],
+              [
+                "iso",
+                "0100-01-01T00:29:56.000Z"
+              ],
+              [
+                "human",
+                "Friday, January 1, 0100 01:00:00"
+              ],
+              [
+                "unix-s",
+                "-59011457404"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Historical IANA offset has seconds; dayjs Date reparse/quarter-hour rounding is not translated for subminute offsets."
+    },
+    {
+      "index": 2049,
+      "text": "0999-01-01T00:00:00Z",
+      "tz": "Pacific/Apia",
+      "target": null,
+      "native": {
+        "error": "Historical subminute timezone offsets are outside native support"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -30641760000000,
+            "label": "ISO Date",
+            "title": "Tuesday, January 1, 0999 12:33:04",
+            "subtitle": "ISO Date - 1,026 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-30641759820000"
+              ],
+              [
+                "iso",
+                "0999-01-01T00:03:00.000Z"
+              ],
+              [
+                "human",
+                "Tuesday, January 1, 0999 12:33:04"
+              ],
+              [
+                "unix-s",
+                "-30641759820"
+              ]
+            ]
+          },
+          {
+            "ms": -30641758384000,
+            "label": "0999-01-01T00:00:00Z",
+            "title": "Tuesday, January 1, 0999 01:00:00",
+            "subtitle": "0999-01-01T00:00:00Z - 1,026 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-30641758204000"
+              ],
+              [
+                "iso",
+                "0999-01-01T00:29:56.000Z"
+              ],
+              [
+                "human",
+                "Tuesday, January 1, 0999 01:00:00"
+              ],
+              [
+                "unix-s",
+                "-30641758204"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Historical IANA offset has seconds; dayjs Date reparse/quarter-hour rounding is not translated for subminute offsets."
+    },
+    {
+      "index": 2050,
+      "text": "1000-01-01T00:00:00Z",
+      "tz": "Pacific/Apia",
+      "target": null,
+      "native": {
+        "error": "Historical subminute timezone offsets are outside native support"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": -30610224000000,
+            "label": "ISO Date",
+            "title": "Wednesday, January 1, 1000 12:33:04",
+            "subtitle": "ISO Date - 1,025 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-30610223820000"
+              ],
+              [
+                "iso",
+                "1000-01-01T00:03:00.000Z"
+              ],
+              [
+                "human",
+                "Wednesday, January 1, 1000 12:33:04"
+              ],
+              [
+                "unix-s",
+                "-30610223820"
+              ]
+            ]
+          },
+          {
+            "ms": -30610222384000,
+            "label": "1000-01-01T00:00:00Z",
+            "title": "Wednesday, January 1, 1000 01:00:00",
+            "subtitle": "1000-01-01T00:00:00Z - 1,025 years ago",
+            "values": [
+              [
+                "unix-ms",
+                "-30610222204000"
+              ],
+              [
+                "iso",
+                "1000-01-01T00:29:56.000Z"
+              ],
+              [
+                "human",
+                "Wednesday, January 1, 1000 01:00:00"
+              ],
+              [
+                "unix-s",
+                "-30610222204"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Historical IANA offset has seconds; dayjs Date reparse/quarter-hour rounding is not translated for subminute offsets."
+    },
+    {
+      "index": 2051,
+      "text": "9999-12-31T23:59:59Z",
+      "tz": "Pacific/Apia",
+      "target": null,
+      "native": {
+        "error": "Outside supported civil years 0100..9999 (engine-specific early-year reparsing or overflow)"
+      },
+      "source": {
+        "rows": [
+          {
+            "ms": 253402300799000,
+            "label": "ISO Date",
+            "title": "Saturday, January 1, 10000 12:59:59",
+            "subtitle": "ISO Date - in 7,975 years",
+            "values": [
+              [
+                "unix-ms",
+                "253402300799000"
+              ],
+              [
+                "iso",
+                "9999-12-31T23:59:59.000Z"
+              ],
+              [
+                "human",
+                "Saturday, January 1, 10000 12:59:59"
+              ],
+              [
+                "unix-s",
+                "253402300799"
+              ]
+            ]
+          }
+        ]
+      },
+      "reason": "Pre-0100 converted civil year or civil year overflow past 9999; JS engine Date reparse has separate early-year semantics."
+    }
+  ],
+  "unresolved": []
+}

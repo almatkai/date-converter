@@ -1,0 +1,8 @@
+{
+  "exit": 0,
+  "freshCacheThisRun": true,
+  "sdk": "https://github.com/almatkai/tezbar-extension-sdk-rust.git?rev=e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+  "lockSha256": "bf51e9c2b2399969b5ab87d132d952929764b0e8c17bb9e957ce476716d574e4",
+  "localPathDependency": false,
+  "binarySha256": "0d42fc8960240c1e056186c7f80c54c9453bbbd8402c40f1dd7ce0f83ee17b05"
+}

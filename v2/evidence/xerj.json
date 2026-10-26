@@ -1,0 +1,12 @@
+{
+  "root": "/Users/almat/Desktop/code/Tezbar APP/rust-extension-ports/date-converter",
+  "prefix": "ax-59ae786eda6c",
+  "stateDir": "v2/.qa/xerj-state",
+  "initialExit": 3,
+  "initialCoverage": "4/4 code files; 3 junk/skipped assets; search ConvertDate no match",
+  "finalExit": 1,
+  "finalLog": "autoindex: 2 scan threads, 2 index workers, 4 pdf workers, --bulk-mb 8 [cores=15 ram_total_mib=24576 ram_available_mib=unknown safe_zone_mib=12288]\nautoindex: bulk HTTP request timeout: 300s\nxerj-bar [????????????????????????] pct unknown | walk | eta unknown\nxerj-progress phase=walk basis=none pct=unknown items=0/0 bytes=0/0 rate=unknown eta_s=unknown eta_quality=unknown since_progress_s=0.0 phase_elapsed_s=0.0 elapsed_s=0.0\nautoindex: 510 files (9 MB) under /Users/almat/Desktop/code/Tezbar APP/rust-extension-ports/date-converter\nautoindex: ignore rules: skipped 2 files and pruned 6 directories (contents never walked, so not counted); 3 ignore files read\nautoindex: ignore rules:   hidden:dotfile \u2014 2 files, 2 directories pruned\nautoindex: ignore rules:   .gitignore:dist/ \u2014 2 directories pruned\nautoindex: ignore rules:   v2/.gitignore:/dist/ \u2014 1 directory pruned\nautoindex: ignore rules:   v2/.gitignore:/target/ \u2014 1 directory pruned\nxerj-progress phase=hash basis=bytes pct=0.0 items=0/510 bytes=0/10204062 rate=unknown eta_s=unknown eta_quality=unknown since_progress_s=0.0 phase_elapsed_s=0.0 elapsed_s=0.0\nxerj-progress phase=scan basis=bytes pct=0.0 items=0/408 bytes=0/9527525 rate=unknown eta_s=unknown eta_quality=unknown since_progress_s=0.0 phase_elapsed_s=0.0 elapsed_s=0.0\nxerj-done ok=false exit=1 reason=aborted wall=0.5s\nerror: project new file v2/Cargo.toml: no frozen dataset accepts family docs, group None, and fields [\"end_line\", \"start_line\", \"text\"]; this requires unsupported dataset/schema evolution (use a new prefix)\n",
+  "finalSearch": "no match in ax-59ae786eda6c-* for: ResultDate\n(looks like a symbol name \u2014 try: xerj def ResultDate)\n(index a relevant repo first: xerj autoindex <folder>)\n",
+  "noAlternatePrefixOrGlobalRestart": true,
+  "coverageNote": "Search absence is not absence of code; Git and exact checks remain authoritative."
+}

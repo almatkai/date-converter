@@ -1,0 +1,126 @@
+{
+  "fmt": {
+    "command": [
+      "cargo",
+      "+stable",
+      "fmt",
+      "--manifest-path",
+      "/Users/almat/Desktop/code/Tezbar APP/rust-extension-ports/date-converter/v2/Cargo.toml",
+      "--",
+      "--check"
+    ],
+    "exit": 0,
+    "output": ""
+  },
+  "stable-tests": {
+    "command": [
+      "cargo",
+      "+stable",
+      "test",
+      "--manifest-path",
+      "/Users/almat/Desktop/code/Tezbar APP/rust-extension-ports/date-converter/v2/Cargo.toml",
+      "--locked",
+      "--all-targets"
+    ],
+    "exit": 0,
+    "output": "\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\nrunning 1 test\ntest fixed_clock_default_rows_and_retry ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s\n\n\nrunning 6 tests\ntest exact_closed_acks ... ok\ntest bounds_and_timezone_inventory ... ok\ntest pinned_recurrence_and_inventory ... ok\ntest private_store_rejects_symlinks ... ok\ntest private_store_guards_and_unknown_keys ... ok\ntest whole_source_parity ... ok\n\ntest result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.60s\n\n\nrunning 6 tests\ntest pinned_host_hello_policy ... ok\ntest host_policy::actual_pinned_manifest_validator_and_negatives ... ok\ntest windows_alias_policy::windows_coverage_requires_rust_and_compatible_platform ... ok\ntest verified_exact_covered_aliases ... ok\ntest actual_resource_functions_before_after ... ok\ntest actual_producer_default_shapes ... ok\n\ntest result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s\n\n    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.04s\n     Running unittests src/lib.rs (v2/target/debug/deps/date_converter_v2-aa286d9246f3ee4f)\n     Running unittests src/main.rs (v2/target/debug/deps/date_converter-5dda7e776097dfb3)\n     Running unittests qa/domain_oracle.rs (v2/target/debug/deps/domain_oracle-9eec0377ddfcbdd2)\n     Running tests/adapter.rs (v2/target/debug/deps/adapter-433c1ff5e20bdb24)\n     Running tests/domain.rs (v2/target/debug/deps/domain-2155afaa2585f57f)\n     Running tests/host_extracts.rs (v2/target/debug/deps/host_extracts-8ec53699fa118813)\n"
+  },
+  "msrv-tests": {
+    "command": [
+      "cargo",
+      "+1.85.0",
+      "test",
+      "--manifest-path",
+      "/Users/almat/Desktop/code/Tezbar APP/rust-extension-ports/date-converter/v2/Cargo.toml",
+      "--locked",
+      "--all-targets"
+    ],
+    "exit": 0,
+    "output": "\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\nrunning 1 test\ntest fixed_clock_default_rows_and_retry ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s\n\n\nrunning 6 tests\ntest exact_closed_acks ... ok\ntest bounds_and_timezone_inventory ... ok\ntest pinned_recurrence_and_inventory ... ok\ntest private_store_rejects_symlinks ... ok\ntest private_store_guards_and_unknown_keys ... ok\ntest whole_source_parity ... ok\n\ntest result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 10.73s\n\n\nrunning 6 tests\ntest pinned_host_hello_policy ... ok\ntest actual_resource_functions_before_after ... ok\ntest host_policy::actual_pinned_manifest_validator_and_negatives ... ok\ntest verified_exact_covered_aliases ... ok\ntest windows_alias_policy::windows_coverage_requires_rust_and_compatible_platform ... ok\ntest actual_producer_default_shapes ... ok\n\ntest result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s\n\n    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.17s\n     Running unittests src/lib.rs (v2/target/debug/deps/date_converter_v2-2da5ede43330ac0e)\n     Running unittests src/main.rs (v2/target/debug/deps/date_converter-74437d78370606c1)\n     Running unittests qa/domain_oracle.rs (v2/target/debug/deps/domain_oracle-6c3f1d9ef40421fb)\n     Running tests/adapter.rs (v2/target/debug/deps/adapter-f1f5df6162b99761)\n     Running tests/domain.rs (v2/target/debug/deps/domain-70e0610d50f08611)\n     Running tests/host_extracts.rs (v2/target/debug/deps/host_extracts-5dc87c90a3384f8a)\n"
+  },
+  "stable-clippy": {
+    "command": [
+      "cargo",
+      "+stable",
+      "clippy",
+      "--manifest-path",
+      "/Users/almat/Desktop/code/Tezbar APP/rust-extension-ports/date-converter/v2/Cargo.toml",
+      "--locked",
+      "--all-targets",
+      "--",
+      "-D",
+      "warnings"
+    ],
+    "exit": 0,
+    "output": "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.07s\n"
+  },
+  "msrv-clippy": {
+    "command": [
+      "cargo",
+      "+1.85.0",
+      "clippy",
+      "--manifest-path",
+      "/Users/almat/Desktop/code/Tezbar APP/rust-extension-ports/date-converter/v2/Cargo.toml",
+      "--locked",
+      "--all-targets",
+      "--",
+      "-D",
+      "warnings"
+    ],
+    "exit": 0,
+    "output": "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.05s\n"
+  },
+  "production-bins": {
+    "command": [
+      "cargo",
+      "+stable",
+      "build",
+      "--manifest-path",
+      "/Users/almat/Desktop/code/Tezbar APP/rust-extension-ports/date-converter/v2/Cargo.toml",
+      "--locked",
+      "--bins"
+    ],
+    "exit": 0,
+    "output": "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.07s\n"
+  },
+  "domain-oracle": {
+    "command": [
+      "python3",
+      "/Users/almat/Desktop/code/Tezbar APP/rust-extension-ports/date-converter/v2/qa/compare.py"
+    ],
+    "exit": 0,
+    "output": "2239 vectors; 2208 exact; 31 explicit limits; 0 unresolved\n"
+  },
+  "actual-renderer": {
+    "command": [
+      "node",
+      "/Users/almat/Desktop/code/Tezbar APP/rust-extension-ports/date-converter/v2/qa/renderer-tests.cjs"
+    ],
+    "exit": 0,
+    "output": "Actual renderer before/after fixtures passed\n"
+  },
+  "actual-worker-copy": {
+    "command": [
+      "node",
+      "/Users/almat/Desktop/code/Tezbar APP/rust-extension-ports/date-converter/v2/qa/worker-copy-tests.cjs"
+    ],
+    "exit": 0,
+    "output": "Pinned actual Raycast worker copy/paste producers passed\n"
+  },
+  "actual-schema": {
+    "command": [
+      "node",
+      "/Users/almat/Desktop/code/Tezbar APP/rust-extension-ports/date-converter/v2/qa/validate-schema.cjs"
+    ],
+    "exit": 0,
+    "output": "Actual pinned schema + 10 negative fixtures passed\n"
+  },
+  "production-sdk-process": {
+    "command": [
+      "python3",
+      "/Users/almat/Desktop/code/Tezbar APP/rust-extension-ports/date-converter/v2/qa/process-tests.py"
+    ],
+    "exit": 0,
+    "output": "11 real SDK process scenarios passed\n"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 3,
+  "id": "com.tezbar.native.date-converter",
+  "slug": "date-converter",
+  "name": "Date Converter",
+  "version": "2.0.0",
+  "description": "Convert a variety of date formats",
+  "icon": "resources/command-icon.png",
+  "runtime": "rust",
+  "execution": "process",
+  "protocolVersion": 1,
+  "repository": "https://github.com/almatkai/date-converter",
+  "platforms": [
+    "macOS",
+    "Windows"
+  ],
+  "commands": [
+    {
+      "name": "index",
+      "title": "Convert Date",
+      "description": "Parse and convert a date",
+      "mode": "view",
+      "keywords": [
+        "date",
+        "epoch",
+        "unix",
+        "seconds",
+        "milliseconds",
+        "iso",
+        "timestamp",
+        "convert"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "preferences": [
+        {
+          "name": "defaultFormat",
+          "title": "Preferred Format",
+          "description": "Default date format used in the copy action when \u23ce is pressed",
+          "type": "dropdown",
+          "default": "unix-ms",
+          "required": false,
+          "data": [
+            {
+              "title": "Unix Timestamp (ms)",
+              "value": "unix-ms"
+            },
+            {
+              "title": "Unix Timestamp (seconds)",
+              "value": "unix-s"
+            },
+            {
+              "title": "ISO Date",
+              "value": "iso"
+            },
+            {
+              "title": "Human Date",
+              "value": "human"
+            }
+          ]
+        },
+        {
+          "name": "secondaryFormat",
+          "title": "Secondary Format",
+          "description": "Secondary date format used in the copy action when \u2318 + \u23ce is pressed",
+          "type": "dropdown",
+          "default": "iso",
+          "required": false,
+          "data": [
+            {
+              "title": "Unix Timestamp (ms)",
+              "value": "unix-ms"
+            },
+            {
+              "title": "Unix Timestamp (seconds)",
+              "value": "unix-s"
+            },
+            {
+              "title": "ISO Date",
+              "value": "iso"
+            },
+            {
+              "title": "Human Date",
+              "value": "human"
+            }
+          ]
+        },
+        {
+          "name": "copyAction",
+          "title": "Copy Action",
+          "description": "Action to take when copying the converted date",
+          "type": "dropdown",
+          "default": "both",
+          "required": false,
+          "data": [
+            {
+              "title": "Copy to clipboard",
+              "value": "copy"
+            },
+            {
+              "title": "Paste to frontmost app",
+              "value": "paste"
+            },
+            {
+              "title": "Copy and paste to frontmost app",
+              "value": "both"
+            }
+          ]
+        },
+        {
+          "name": "displayFormat",
+          "title": "Default Display Time Format",
+          "description": "Default time format for displaying time. By default, 'dddd, MMMM D, YYYY hh:mm:ss' will be used. Available formats can be found in the day.js library documentation.",
+          "type": "textfield",
+          "default": "dddd, MMMM D, YYYY hh:mm:ss",
+          "required": false
+        },
+        {
+          "name": "humanFormat",
+          "title": "Human-readable Time Format",
+          "description": "Time format for human-readable time. By default, 'dddd, MMMM D, YYYY hh:mm:ss' will be used. Available formats can be found in the day.js library documentation.",
+          "type": "textfield",
+          "default": "dddd, MMMM D, YYYY hh:mm:ss",
+          "required": false
+        }
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "serialize",
+      "timeoutMs": 10000,
+      "icon": "resources/command-icon.png"
+    }
+  ],
+  "preferences": [],
+  "replaces": [
+    "com.tezbar.date-converter",
+    "raycast.date-converter"
+  ],
+  "capabilities": [
+    "clipboard.write",
+    "clipboard.pasteText",
+    "settings.open"
+  ],
+  "artifacts": {},
+  "verification": [
+    {
+      "platform": "macOS",
+      "state": "not-run",
+      "note": "Feature branch review only; native GUI, Windows fonts and OS locale not run."
+    },
+    {
+      "platform": "Windows",
+      "state": "not-run",
+      "note": "Feature branch review only; native GUI, Windows fonts and OS locale not run."
+    }
+  ]
+}

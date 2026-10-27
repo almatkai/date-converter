@@ -1,0 +1,329 @@
+--- a/src/renderer/ExtensionRuntimeView.tsx
++++ b/src/renderer/ExtensionRuntimeView.tsx
+@@ -427,6 +427,7 @@
+   const [error, setError] = useState<string | null>(null)
+   const [actionNotice, setActionNotice] = useState<ActionNotice | null>(null)
+   const searchRequestSeq = useRef(0)
++  const inputRevision = useRef(0)
+   const currentSession = useRef<string | null>(null)
+   const sessionOwner = `${state.sessionId}:${state.generation ?? ''}`
+   currentSession.current = sessionOwner
+@@ -625,7 +626,9 @@
+             onBack={onBack}
+             onSearchTextChanged={handleSearchTextChanged}
+             onLoadMore={handleLoadMore}
++            onInputDraftChange={() => { inputRevision.current += 1; searchRequestSeq.current += 1 }}
+             onInvokeAction={async (actionId, formValues) => {
++              const inputOwner = inputRevision.current
+               setError(null)
+               const invokedAction = state.actions.find((action) => action.id === actionId)
+               if (isFormSurface && invokedAction?.kind === 'submit-form') {
+@@ -637,7 +640,7 @@
+                 formValues,
+               })
+ 
+-              if (currentSession.current !== sessionOwner) return
++              if (currentSession.current !== sessionOwner || inputRevision.current !== inputOwner) return
+               if (!result.ok) {
+                 setError(result.message)
+                 showActionFailure(result.message)
+--- a/src/renderer/src/raycast-api/index.tsx
++++ b/src/renderer/src/raycast-api/index.tsx
+@@ -32,6 +32,7 @@
+   onBack: () => void
+   onSearchTextChanged: (searchText: string) => Promise<void> | void
+   onLoadMore: () => Promise<void> | void
++  onInputDraftChange?: () => void
+   onInvokeAction: (actionId: string, formValues?: Record<string, unknown>) => Promise<void> | void
+ }
+ 
+@@ -59,8 +60,14 @@
+     onBack,
+     onSearchTextChanged,
+     onLoadMore,
+-    onInvokeAction,
++    onInvokeAction: invokeHost,
++    onInputDraftChange,
+   } = props
++  const listDraft = useRef<{ searchText: string; dirty: boolean; searchDirty: boolean; accessoryValue: string; token: unknown } | null>(null)
++  const onInvokeAction = useCallback((id: string, values?: Record<string, unknown>) => {
++    const draft = listDraft.current
++    return invokeHost(id, root.props?.__draftGuard ? { ...values, __searchText: draft?.searchText ?? root.props.searchText, __draftDirty: draft?.dirty ?? false, __searchDirty: draft?.searchDirty ?? false, __accessoryValue: draft?.accessoryValue ?? root.props.__timezone, __viewToken: draft?.token ?? root.props.__draftGuard } : values)
++  }, [invokeHost, root])
+   const [showActions, setShowActions] = useState(false)
+   const [actionFilterIds, setActionFilterIds] = useState<string[] | null>(null)
+   const formRuntimeRef = useRef<FormRuntimeHandle>(null)
+@@ -184,6 +191,7 @@
+             />
+           ) : (
+             <ListRuntime
++              onDraftChange={(draft) => { listDraft.current = draft; if (draft.dirty) onInputDraftChange?.() }}
+               root={root}
+               title={title}
+               commandName={commandName}
+--- a/src/renderer/src/raycast-api/list-runtime.tsx
++++ b/src/renderer/src/raycast-api/list-runtime.tsx
+@@ -26,6 +26,7 @@
+ }
+ 
+ type ListAccessory = {
++  value?: string
+   actionId?: string
+   options: Array<{ title: string; value: string; icon?: unknown }>
+ }
+@@ -48,6 +49,7 @@
+   walk(node)
+ 
+   return {
++    value: typeof node.props?.value === 'string' ? node.props.value : undefined,
+     actionId: typeof node.props?.actionId === 'string' ? node.props.actionId : undefined,
+     options,
+   }
+@@ -477,6 +479,7 @@
+   onOpenActions,
+   onSearchTextChanged,
+   onLoadMore,
++  onDraftChange,
+ }: {
+   root: ExtensionRuntimeNode
+   title: string
+@@ -487,6 +490,7 @@
+   onOpenActions: (actionIds?: string[]) => void
+   onSearchTextChanged: (searchText: string) => Promise<void> | void
+   onLoadMore: () => Promise<void> | void
++  onDraftChange?: (value: { searchText: string; dirty: boolean; searchDirty: boolean; accessoryValue: string; token: unknown }) => void
+ }): React.ReactNode {
+   const inputRef = useRef<HTMLInputElement>(null)
+   const listRef = useRef<HTMLDivElement>(null)
+@@ -529,9 +533,15 @@
+   const [query, setQuery] = useState(
+     typeof root.props?.searchText === 'string' ? root.props.searchText : '',
+   )
++  const [draftRevision, setDraftRevision] = useState(0)
++  const draftDirty = useRef(false)
++  const draftText = useRef(query)
++  const accessoryDraft = useRef(String(root.props?.__timezone ?? ''))
++  const accessoryDirty = useRef(false)
++  const [accessoryPending, setAccessoryPending] = useState(false)
+   const [selected, setSelected] = useState(0)
+   const [accessoryValue, setAccessoryValue] = useState(
+-    searchAccessory?.options[0]?.value ?? '',
++    searchAccessory?.value ?? searchAccessory?.options[0]?.value ?? '',
+   )
+   const [loadingMore, setLoadingMore] = useState(false)
+ 
+@@ -545,13 +555,22 @@
+ 
+   useEffect(() => {
+     if (typeof root.props?.searchText === 'string') {
++      if (root.props?.__draftGuard && ((draftDirty.current && root.props.searchText !== draftText.current) || (accessoryDirty.current && root.props.__timezone !== accessoryDraft.current))) return
+       setQuery(root.props.searchText)
+-    }
+-  }, [root.props?.searchText])
++      draftText.current = root.props.searchText
++      draftDirty.current = false
++      accessoryDirty.current = false
++      setAccessoryPending(false)
++      accessoryDraft.current = String(root.props?.__timezone ?? '')
++      onDraftChange?.({ searchText: root.props.searchText, dirty: false, searchDirty: false, accessoryValue: accessoryDraft.current, token: root.props?.__draftGuard })
++    }
++  }, [root.props?.searchText, root.props?.__draftGuard])
+ 
+   useEffect(() => {
+     setAccessoryValue((current) => {
+       if (!searchAccessory || searchAccessory.options.length === 0) return ''
++      if (root.props?.__draftGuard && accessoryDirty.current && searchAccessory.value !== accessoryDraft.current) return current
++      if (searchAccessory.value !== undefined) return searchAccessory.value
+       return searchAccessory.options.some((option) => option.value === current)
+         ? current
+         : searchAccessory.options[0]?.value ?? ''
+@@ -559,7 +578,7 @@
+   }, [searchAccessory])
+ 
+   useEffect(() => {
+-    if (query === lastSentQuery.current) return
++    if (query === lastSentQuery.current && !draftDirty.current) return
+     if (debounceTimer.current) {
+       clearTimeout(debounceTimer.current)
+     }
+@@ -572,7 +591,7 @@
+         clearTimeout(debounceTimer.current)
+       }
+     }
+-  }, [query, onSearchTextChanged])
++  }, [query, onSearchTextChanged, draftRevision])
+ 
+   const colorConversionRows = useMemo<ListRow[]>(() => {
+     if (!isColorConversionSurface) return []
+@@ -693,14 +712,14 @@
+     ? hasQuery
+       ? 'No color formats'
+       : 'Enter a color'
+-    : hasQuery
++    : hasQuery && !hasServerSearch
+       ? 'No matching applications'
+       : emptyView?.title || 'No list items'
+   const emptyDescription = isColorConversionSurface
+     ? hasQuery
+       ? 'Try HEX, RGB, RGBA, HSL, or HSLA.'
+       : 'Type a color value to convert it.'
+-    : hasQuery
++    : hasQuery && !hasServerSearch
+       ? 'Try a different app name or keyword.'
+       : emptyView?.description || ''
+ 
+@@ -720,7 +739,12 @@
+                 type="text"
+                 value={query}
+                 onChange={(event) => {
+-                  setQuery(event.target.value)
++                  const text = event.target.value
++                  draftText.current = text
++                  draftDirty.current = true
++                  onDraftChange?.({ searchText: text, dirty: true, searchDirty: true, accessoryValue: accessoryDraft.current, token: root.props?.__draftGuard })
++                  setDraftRevision((value) => value + 1)
++                  setQuery(text)
+                   setSelected(0)
+                 }}
+                 placeholder={searchBarPlaceholder}
+@@ -735,13 +759,37 @@
+                   hasManySearchOptions ? 'w-full' : 'shrink-0',
+                 )}
+               >
+-                {searchAccessory.options.map((option) => {
++                {hasManySearchOptions ? <select
++                  aria-label="Select Target Timezone"
++                  value={accessoryValue}
++                  disabled={accessoryPending}
++                  className="h-8 w-full rounded-tezbar-chip border border-white/10 bg-panel px-2.5 text-[12px] text-ink-1"
++                  onChange={(event) => {
++                    if (accessoryDirty.current) return
++                    const value = event.target.value
++                    accessoryDraft.current = value
++                    accessoryDirty.current = true
++                    setAccessoryPending(true)
++                    onDraftChange?.({ searchText: draftText.current, dirty: true, searchDirty: draftDirty.current, accessoryValue: value, token: root.props?.__draftGuard })
++                    setAccessoryValue(value)
++                    setSelected(0)
++                    if (searchAccessory.actionId) onRunPrimaryAction(searchAccessory.actionId, { value })
++                  }}
++                >
++                  {searchAccessory.options.map((option) => <option key={option.value} value={option.value}>{option.title}</option>)}
++                </select> : searchAccessory.options.map((option) => {
+                   const active = accessoryValue === option.value
+                   return (
+                     <button
+                       key={option.value}
++                      disabled={accessoryPending}
+                       type="button"
+                       onClick={() => {
++                        if (accessoryDirty.current) return
++                        accessoryDraft.current = option.value
++                        accessoryDirty.current = true
++                        setAccessoryPending(true)
++                        onDraftChange?.({ searchText: draftText.current, dirty: true, searchDirty: draftDirty.current, accessoryValue: option.value, token: root.props?.__draftGuard })
+                         setAccessoryValue(option.value)
+                         setSelected(0)
+                         if (searchAccessory.actionId) {
+--- a/src-tauri/src/native_core/extensions/native.rs
++++ b/src-tauri/src/native_core/extensions/native.rs
+@@ -615,7 +615,7 @@
+             self.dispatch(channel, body, id).await.map(Some)
+         } else if channel == "extension:run-command" {
+             let requested = body["extensionId"].as_str().unwrap_or("");
+-            if requested.starts_with("com.tezbar.native.") || v2_runtime::slug(requested).is_some()
++            if requested.starts_with("com.tezbar.native.") || v2_runtime::slug(requested).is_some() || match registry::verified_alias(ctx, requested, body["commandName"].as_str().unwrap_or("")) { Ok(v) => v.is_some(), Err(e) => return Some(Ok(json!({"ok":false,"message":e}))) }
+             {
+                 self.launch(ctx, files, body).await
+             } else {
+@@ -643,6 +643,8 @@
+         let command = body["commandName"].as_str().ok_or("Missing commandName")?;
+         let canonical = if requested.starts_with("com.tezbar.native.") {
+             requested.to_string()
++        } else if let Some(id) = registry::verified_alias(ctx, requested, command)? {
++            id
+         } else {
+             v2_runtime::canonical_id(v2_runtime::slug(requested).ok_or("Unknown extension")?)
+         };
+--- a/src-tauri/src/native_core/extensions/registry.rs
++++ b/src-tauri/src/native_core/extensions/registry.rs
+@@ -14,6 +14,7 @@
+     id: String,
+     slug: String,
+     path: PathBuf,
++    resource_path: PathBuf,
+     manifest: Value,
+     data_dir: PathBuf,
+ }
+@@ -73,9 +74,10 @@
+             };
+             let Ok(slug) = slug(name) else { continue };
+             let native = name.starts_with("com.tezbar.native.");
++            let mut resource_path = path.clone();
+             let mut manifest = if native {
+                 match super::process_install::resolve(ctx, name) {
+-                    Ok(package) => package.manifest,
++                    Ok(package) => { resource_path = package.dir; package.manifest },
+                     Err(error) => {
+                         // A damaged canonical directory is NEVER a Raycast package.
+                         let mut value = read_json(&path.join("package.json"))
+@@ -108,6 +110,7 @@
+                 id,
+                 slug,
+                 path,
++                resource_path,
+                 manifest,
+                 data_dir: ctx.paths.data_dir.clone(),
+             });
+@@ -128,6 +131,21 @@
+ }
+ 
+ /// Native implementations use the same discovery and platform rules as the launcher.
++pub(super) fn verified_alias(ctx: &CoreContext, requested: &str, command: &str) -> Result<Option<String>, String> {
++    if requested.starts_with("com.tezbar.native.") || requested.trim() != requested { return Ok(None); }
++    let mut matches = Vec::new();
++    for e in collect(ctx) {
++        if !e.id.starts_with("com.tezbar.native.") || !e.manifest["healthError"].is_null() { continue; }
++        if !e.manifest["replaces"].as_array().is_some_and(|a|a.iter().any(|v|v.as_str()==Some(requested))) { continue; }
++        let Ok(package) = super::process_install::resolve(ctx, &e.id) else { continue; };
++        if !package.manifest["replaces"].as_array().is_some_and(|a|a.iter().any(|v|v.as_str()==Some(requested))) { continue; }
++        let covered = package.manifest["commands"].as_array().is_some_and(|a|a.iter().any(|c|c["name"]==command && c["runtime"]=="rust" && compatible(c,true)));
++        matches.push((e.id,covered));
++    }
++    if matches.len()>1 { return Err("Ambiguous verified extension alias".into()); }
++    Ok(matches.pop().and_then(|(id,covered)|covered.then_some(id)))
++}
++
+ pub(super) fn installed_command(ctx: &CoreContext, id: &str, command: &str) -> Option<Installed> {
+     let native = if id.starts_with("raycast.") {
+         let slug = slug(id).ok()?;
+@@ -245,8 +263,8 @@
+         return None;
+     }
+     let mut candidates = vec![
+-        extension.path.join(relative),
+-        extension.path.join("assets").join(relative),
++        extension.resource_path.join(relative),
++        extension.resource_path.join("assets").join(relative),
+     ];
+     if extension.id.starts_with("com.tezbar.native.") {
+         if let Some(packages) = extension.path.parent() {
+@@ -309,8 +327,8 @@
+         return None;
+     }
+     let mut candidates = vec![
+-        extension.path.join(relative),
+-        extension.path.join("assets").join(relative),
++        extension.resource_path.join(relative),
++        extension.resource_path.join("assets").join(relative),
+     ];
+     if extension.id.starts_with("com.tezbar.native.") {
+         if let Some(packages) = extension.path.parent() {
+@@ -574,6 +592,7 @@
+     let extension = Installed {
+         id: id.into(),
+         slug: slug(id)?,
++        resource_path: path.clone(),
+         path,
+         manifest: Value::Null,
+         data_dir: ctx.paths.data_dir.clone(),

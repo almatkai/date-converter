@@ -1,0 +1,40 @@
+Date Converter native V2, feature branch implementation (2026).
+Own repository: https://github.com/almatkai/date-converter
+Own source pin: ad4ebc6856db6a9c554a4e4a093a319b12f66fdf.
+Derived from Raycast extensions/date-converter at
+6734d85992290066fd31a7f5bee3cca3d3545a1a. Original author asportnoy;
+contributors vineus, danyal, alex925; Tezbar adaptation almatkai.
+Original PNG is included unchanged. See notices/RAYCAST-UPSTREAM-LICENSE.
+
+Pure native date.rs/natural.rs translations originated in
+https://github.com/almatkai/datetime-format-converter at immutable commit
+1fdd57a26e5ffe55c01e7d714f5dae8172abe837/v2, mechanically copied, then
+adapted to this command and chrono-node 2.7.8. No Git branch dependency.
+REUSED-NATIVE-LICENSE and REUSED-NATIVE-NOTICE retain that provenance;
+that historical notice describes its originating package, not this package.
+
+Grammar resource and algorithms derive from chrono-node 2.7.8 (MIT),
+dayjs 1.11.13 (MIT), javascript-time-ago 2.5.11 and relative-time-format
+1.1.6 (MIT). Zone names derive from timezone-support 3.1.0, whose locked
+moment-timezone 0.5.39 dependency uses IANA data; licenses for both and
+moment are retained. Native IANA conversion uses tz-rs 0.7.3 with tzdb_data 0.2.4
+(IANA 2026a), including native TZif recurrence after final explicit transitions.
+Their authentic MIT/Apache-2.0 and MIT-0 license texts are retained in notices/rust.
+chrono-tz 0.10.4 supplies zone identifiers only; its crate and tz licenses are included. The source timezone list
+and native conversion database are distinct, as in the original.
+
+Independent tezbar-extension-sdk 0.1.1 is pinned by HTTPS Git revision
+e955911f0bf5b558f9d3eb5183df0adc95c22af2. SDK-LICENSE/SDK-NOTICE retained.
+Pinned host function fixtures/patch derive from Tezbar at
+ ea100cee3f69711de12485ba061950c5fc65258f; HOST-LICENSE retained.
+
+Authentic own LICENSE contains literal backslash-n characters and is
+preserved byte-for-byte in notices/OWN-LICENSE. It has not been rewritten.
+Rust lock checksums, declared SPDX expressions and copied authentic texts
+are inventoried in evidence/rust-notices.json. r-efi 6.0.0 has no license
+text in its registry archive; missingText is explicitly recorded. No
+license grant for missing text is invented. It is not compiled for the
+ARM64 development binary. Third-party notices remain authoritative.
+
+QA-only JavaScript/source fixtures are not the product runtime. The
+product is the standalone Rust executable and its resources/notices.

@@ -1,0 +1,25 @@
+# INACTIVE: this file is intentionally outside .github/workflows.
+# Parent can adapt/pin CI actions after review. It performs QA, never publication.
+name: Native Date Converter review example
+on: workflow_dispatch
+jobs:
+  review:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 26
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt,clippy
+      - run: rustup toolchain install 1.85.0 --component clippy
+      - run: python3 v2/qa/bootstrap.py
+      - run: python3 v2/qa/setup-schema.py
+      - run: node v2/qa/extract-grammar.cjs
+      - run: python3 v2/qa/make-vectors.py && python3 v2/qa/round2-vectors.py && node v2/qa/source-oracle.cjs
+      - run: python3 v2/qa/prepare-host-patch.py && python3 v2/qa/generate-host-tests.py
+      - run: python3 v2/qa/validate.py
+      - run: python3 v2/qa/isolated-build.py && python3 v2/qa/package.py
